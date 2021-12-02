@@ -12,6 +12,7 @@
     "typecheck": "tsc --project tsconfig.prod.json",
     "precompile": "rm -rf dist",
     "compile": "tsc -p tsconfig.prod.json",
+    "postcompile": "cd src && find . -type f -name '*.txt' | cpio -pdm ../dist",
     "prestart": "yarn compile",
     "start": "node ./dist/index.js"
   },

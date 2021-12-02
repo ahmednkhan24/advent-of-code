@@ -8,6 +8,9 @@ const getDayFromArgs = () => {
 const main = () => {
   const day = getDayFromArgs();
   days[day]();
+
+  console.log('cwd: ', process.cwd());
+  console.log('dirname: ', __dirname);
 };
 
 main();
