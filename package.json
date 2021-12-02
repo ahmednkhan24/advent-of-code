@@ -1,0 +1,24 @@
+{
+  "name": "advent-of-code",
+  "version": "1.0.0",
+  "private": true,
+  "main": "dist/index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ahmednkhan24/serverless-api"
+  },
+  "scripts": {
+    "pretty": "prettier './src/**/*.{js,ts}' --write",
+    "typecheck": "tsc --project tsconfig.prod.json",
+    "precompile": "rm -rf dist",
+    "compile": "tsc -p tsconfig.prod.json",
+    "prestart": "yarn compile",
+    "start": "node ./dist/index.js"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@types/node": "^12.6.8",
+    "prettier": "^2.3.2",
+    "typescript": "^3.5.3"
+  }
+}
