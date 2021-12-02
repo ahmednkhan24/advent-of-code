@@ -1,3 +1,7 @@
-const helloWorld = () => console.log('hello world!');
+import * as days from './days';
 
-helloWorld();
+const main = () => {
+  days.day1();
+};
+
+main();
