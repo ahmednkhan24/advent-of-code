@@ -7,7 +7,6 @@ const getDayFromArgs = () => {
 
 const main = () => {
   const day = getDayFromArgs();
-  console.log('day: ', day);
   days[day]();
 };
 
