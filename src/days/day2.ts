@@ -27,11 +27,61 @@ const part1 = (input: string[]) => {
   return [finalHorizontalPosition, finalDepth];
 };
 
+const part2 = (input: string[]) => {
+  // from ['forward 4', 'up 2'] to [{ action: 'forward', amount: 4}, { action: 'up', amount: -2 }]
+  const data = input.map((line) => {
+    const [action, amount] = line.toLowerCase().split(' ');
+    let amountInt = parseInt(amount);
+    if (action === 'up') {
+      amountInt *= -1;
+    }
+
+    return {
+      action,
+      amount: amountInt,
+    };
+  });
+
+  const initialValue = {
+    aim: 0,
+    depth: 0,
+    position: 0,
+  };
+
+  const final = data.reduce((accumulator, current) => {
+    let aim = accumulator.aim;
+    let depth = accumulator.depth;
+    let position = accumulator.position;
+
+    if (current.action !== 'forward') {
+      aim += current.amount;
+    } else {
+      position += current.amount;
+      depth += aim * current.amount;
+    }
+
+    return {
+      aim,
+      depth,
+      position,
+    };
+  }, initialValue);
+
+  return final;
+};
+
 export const day2 = () => {
   const input = parseTxtFile('day2-input');
 
-  const [position, depth] = part1(input);
-  console.log('position: ', position);
+  const [q1_position, q1_depth] = part1(input);
+  console.log('q1_position: ', q1_position);
+  console.log('q1_depth: ', q1_depth);
+  console.log('q1_position * q1_depth = ', q1_position * q1_depth);
+  console.log();
+
+  const { aim, depth, position } = part2(input);
+  console.log('aim: ', aim);
   console.log('depth: ', depth);
-  console.log('position * depth = ', position * depth);
+  console.log('position: ', position);
+  console.log('q2_position * q2_depth = ', depth * position);
 };
