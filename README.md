@@ -1,6 +1,7 @@
 # advent-of-code
 
-Puzzles solved for [advent of code 2021](https://adventofcode.com/2021/about)
+- Puzzles solved for [advent of code 2021](https://adventofcode.com/2021/about)
+- Execute the code for a day by running `yarn start dayX` where `X` is the day you wish to run
 
 - [Day 1](#----day-1-sonar-sweep----)
 - [Day 2](#----day-2-dive----)
