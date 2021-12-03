@@ -23,13 +23,13 @@ const count3measures = (data: number[]) => {
 };
 
 export const day1 = () => {
-  const data = parseTxtFile('day1-input').map((n) => parseInt(n));
+  const input = parseTxtFile('day1-input').map((n) => parseInt(n));
 
   // How many measurements are larger than the previous measurement?
-  const num = countIncreases(data);
+  const num = countIncreases(input);
   console.log('num: ', num);
 
   // How many sums are larger than the previous sum?
-  const num2 = count3measures(data);
+  const num2 = count3measures(input);
   console.log('num2: ', num2);
 };
