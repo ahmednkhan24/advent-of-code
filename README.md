@@ -3,12 +3,12 @@
 - Puzzles solved for [advent of code 2021](https://adventofcode.com/2021/about)
 - Execute the code for a day by running `yarn start dayX` where `X` is the day you wish to run
 
-# Table of Contents
+## Table of Contents
 
 - [Day 1](#----day-1-sonar-sweep----)
 - [Day 2](#----day-2-dive----)
 
-# --- Day 1: Sonar Sweep ---
+## --- Day 1: Sonar Sweep ---
 
 You're minding your own business on a ship at sea when the overboard alarm goes off! You rush to see if you can help. Apparently, one of the Elves tripped and accidentally sent the sleigh keys flying into the ocean!
 
@@ -60,7 +60,7 @@ How many measurements are larger than the previous measurement?
 
 Your puzzle answer was 1139.
 
-## --- Part Two ---
+### --- Part Two ---
 
 Considering every single measurement isn't as useful as you expected: there's just too much noise in the data.
 
@@ -102,7 +102,7 @@ Consider sums of a three-measurement sliding window. How many sums are larger th
 
 Your puzzle answer was 1103.
 
-# --- Day 2: Dive! ---
+## --- Day 2: Dive! ---
 
 Now, you need to figure out how to pilot this thing.
 
@@ -140,7 +140,7 @@ Calculate the horizontal position and depth you would have after following the p
 
 Your puzzle answer was 2187380.
 
-## --- Part Two ---
+### --- Part Two ---
 
 Based on your calculations, the planned course doesn't seem to make any sense. You find the submarine manual and discover that the process is actually slightly more complicated.
 
