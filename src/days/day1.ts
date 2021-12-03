@@ -23,7 +23,7 @@ const count3measures = (data: number[]) => {
 };
 
 export const day1 = () => {
-  const data = parseTxtFile('day1-input');
+  const data = parseTxtFile('day1-input').map((n) => parseInt(n));
 
   // How many measurements are larger than the previous measurement?
   const num = countIncreases(data);
