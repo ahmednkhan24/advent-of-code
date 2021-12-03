@@ -1,6 +1,6 @@
 import { parseTxtFile } from '../utils';
 
-const part1 = (input: string[]) => {
+export const part1 = (input: string[]) => {
   const finalHorizontalPosition = input
     // only keep the horizontal positions
     .filter((line) => line.toLowerCase().includes('forward'))
@@ -27,7 +27,7 @@ const part1 = (input: string[]) => {
   return [finalHorizontalPosition, finalDepth];
 };
 
-const part2 = (input: string[]) => {
+export const part2 = (input: string[]) => {
   // from ['forward 4', 'up 2'] to [{ action: 'forward', amount: 4}, { action: 'up', amount: -2 }]
   const data = input.map((line) => {
     const [action, amount] = line.toLowerCase().split(' ');
