@@ -1,4 +1,4 @@
-import { parseTxtFile } from '../utils/parseTxtFile';
+import { parseTxtFile } from '../utils';
 
 const countIncreases = (data: number[]) => {
   let numIncreases = 0;
