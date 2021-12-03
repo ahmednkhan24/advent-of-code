@@ -1,2 +1,2 @@
-export * from './day1';
-export * from './day2';
+export { day1 } from './day1';
+export { day2 } from './day2';

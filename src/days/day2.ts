@@ -1,7 +1,7 @@
 import { parseTxtFile } from '../utils';
 
 export const part1 = (input: string[]) => {
-  const finalHorizontalPosition = input
+  const position = input
     // only keep the horizontal positions
     .filter((line) => line.toLowerCase().includes('forward'))
     // only keep the numeric value
@@ -12,7 +12,7 @@ export const part1 = (input: string[]) => {
     // sum all the values together
     .reduce((total, current) => total + current, 0);
 
-  const finalDepth = input
+  const depth = input
     // remove the horizontal positions
     .filter((line) => !line.toLowerCase().includes('forward'))
     // convert values from ['up 4', 'down 3'] to [-4, 3]
@@ -24,7 +24,7 @@ export const part1 = (input: string[]) => {
     // sum all the values together
     .reduce((total, current) => total + current, 0);
 
-  return [finalHorizontalPosition, finalDepth];
+  return { position, depth };
 };
 
 export const part2 = (input: string[]) => {
@@ -73,7 +73,7 @@ export const part2 = (input: string[]) => {
 export const day2 = () => {
   const input = parseTxtFile('day2-input');
 
-  const [q1_position, q1_depth] = part1(input);
+  const { position: q1_position, depth: q1_depth } = part1(input);
   console.log('q1_position: ', q1_position);
   console.log('q1_depth: ', q1_depth);
   console.log('q1_position * q1_depth = ', q1_position * q1_depth);
