@@ -1,6 +1,6 @@
 import { parseTxtFile } from '../utils';
 
-export const swapRowsAndColumnsOfStringArray = (arr: string[]) => {
+export const swapRowsAndColumns = (arr: string[]) => {
   const restructured = [];
 
   // loop through how many items we have
@@ -25,7 +25,7 @@ export const mostOftenChar = (arr: string[]) =>
     .pop();
 
 export const part1 = (input: string[]) => {
-  const restructured = swapRowsAndColumnsOfStringArray(input);
+  const restructured = swapRowsAndColumns(input);
   const binary = restructured.map((row) => mostOftenChar(row));
   const epsilon = binary.map((bit) => (bit === '1' ? '0' : '1'));
 

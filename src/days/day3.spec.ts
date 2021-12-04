@@ -1,9 +1,4 @@
-import {
-  part1,
-  part2,
-  swapRowsAndColumnsOfStringArray,
-  mostOftenChar,
-} from './day3';
+import { part1, part2, swapRowsAndColumns, mostOftenChar } from './day3';
 
 describe('day3', () => {
   const input = [
@@ -49,7 +44,7 @@ describe('day3', () => {
     });
 
     it('swapRowsAndColumnsOfStringArray', () => {
-      const actual = swapRowsAndColumnsOfStringArray(['000', '111']);
+      const actual = swapRowsAndColumns(['000', '111']);
 
       expect(actual).toEqual([
         ['0', '1'],
