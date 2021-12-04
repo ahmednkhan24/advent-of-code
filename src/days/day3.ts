@@ -4,7 +4,7 @@ export const swapRowsAndColumnsOfStringArray = (arr: string[]) => {
   const restructured = [];
 
   // loop through how many items we have
-  for (let i = 0; i < arr.length; i++) {
+  for (let i in arr) {
     // loop through the length of 1 item
     for (let j = 0; j < arr[0].length; j++) {
       restructured[j] = restructured[j]
